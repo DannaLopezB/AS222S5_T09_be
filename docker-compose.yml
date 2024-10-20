@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    image: dannalopez/as222s5_t09_be:latest
+    ports:
+      - "8085:8085"
+    environment:
+      DATABASE_URL: r2dbc:postgresql://ep-snowy-rice-a4snra3l.us-east-1.aws.neon.tech/db_chatgpt?sslmode=require
+      DATABASE_USERNAME: db_chatgpt_owner
+      DATABASE_PASSWORD: Wk07DoRIaQmX
+      API_KEY: 5258e2b9edmsh19d0d7a4a0cdc57p18c749jsn9a0d4349d129
