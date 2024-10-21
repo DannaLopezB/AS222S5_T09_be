@@ -5,7 +5,7 @@ COPY target/*.jar app.jar
 ENV DATABASE_URL = "r2dbc:postgresql://ep-snowy-rice-a4snra3l.us-east-1.aws.neon.tech/db_chatgpt?sslmode=require"
 ENV DATABASE_USERNAME = "db_chatgpt_owner"
 ENV DATABASE_PASSWORD = "Wk07DoRIaQmX"
-ENV API_KEY = "5258e2b9edmsh19d0d7a4a0cdc57p18c749jsn9a0d4349d129"
+ENV API_KEY ${RAPIDAPI_KEY}
 
 EXPOSE 8085
 ENTRYPOINT ["java", "-jar", "app.jar"]
